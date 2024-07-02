@@ -5,10 +5,8 @@
 import FlutterMacOS
 import Foundation
 
-import connectivity_macos
-import url_launcher_macos
+import shared_preferences_foundation
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-  ConnectivityPlugin.register(with: registry.registrar(forPlugin: "ConnectivityPlugin"))
-  UrlLauncherPlugin.register(with: registry.registrar(forPlugin: "UrlLauncherPlugin"))
+  SharedPreferencesPlugin.register(with: registry.registrar(forPlugin: "SharedPreferencesPlugin"))
 }

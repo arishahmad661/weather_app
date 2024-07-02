@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:weather/homepage.dart';
+import 'package:weather/screens/home_page.dart';
 
+void main() {
+  runApp(const MyApp());
+}
 
-void main(List<String> args) {
-  runApp(MaterialApp(
-    home: HomePage("Delhi"),
-    // home: FirstPage(),
-    debugShowCheckedModeBanner: false,
-  ));  
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Weather App',
+      theme: ThemeData(
+        brightness: Brightness.light,
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    );
+  }
 }
 
